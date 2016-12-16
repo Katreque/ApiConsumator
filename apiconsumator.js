@@ -8,13 +8,3 @@ angular.module('ApiConsumator', [
     'ngAnimate',
 ])
  
-.config(['$routeProvider', function ($routeProvider) {
-
-    $routeProvider
-        .when('/', {
-            controller: 'TReturnerConsum',
-            templateUrl:'TReturnerConsum/TReturnerConsum.html',
-        })
- 
-        .otherwise({ redirectTo: '/' });
-}])
