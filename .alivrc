@@ -1,0 +1,6 @@
+{
+    "quiet": true,
+    "proxy": true,
+    "proxyTarget": "http://localhost:8080",
+    "proxyWhen": "/api/*"
+}
