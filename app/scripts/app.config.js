@@ -6,8 +6,14 @@ angular.module('ApiConsumator')
     $routeProvider
         .when('/', {
             controller: 'TReturnerController',
-            templateUrl:'TReturnerConsum/TReturnerConsum.html',
+            controllerAs: 'treturnerConsum',
+            templateUrl:'./views/TReturnerConsum_view.html',
         })
  
         .otherwise({ redirectTo: '/' });
+}])
+
+.config(['$locationProvider', function($locationProvider){
+
+    $locationProvider.html5Mode(true);
 }])

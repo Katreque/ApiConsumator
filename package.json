@@ -1,0 +1,26 @@
+{
+  "name": "apiconsumator",
+  "version": "0.0.1",
+  "description": "How to Consume an API with AngularJS 1.*",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "aliv",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Katreque/ApiConsumator.git"
+  },
+  "author": "Katreque",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Katreque/ApiConsumator/issues"
+  },
+  "homepage": "https://github.com/Katreque/ApiConsumator#readme",
+  "devDependencies": {
+    "aliv": "^1.4.1"
+  }
+}

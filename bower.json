@@ -1,0 +1,22 @@
+{
+  "name": "apiconsumator",
+  "description": "How to Consume an API with AngularJS 1.*",
+  "main": "index.js",
+  "authors": [
+    "Katreque"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Katreque/ApiConsumator",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "^1.6.0",
+    "bootstrap": "^3.3.7",
+    "angular": "^1.6.0"
+  }
+}

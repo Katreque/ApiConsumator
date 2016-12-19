@@ -1,0 +1,32 @@
+<body>
+    <div class="container col-md-4 col-md-offset-4 col-xs-6 col-xs-offset-3 form-group">
+        <form name="base">
+            <div class="form-group text-center">
+                <label>Digite o número do T que deseja verificar</label>
+            </div>
+            <div class="form-group pull-center">
+                <input type="number" ng-model="treturnerConsum.id" class="form-control">
+            </div>
+            <div class="pull-right">
+                <button type="button" class="btn btn-primary" ng-click="treturnerConsum.consultarPorId()" ng-disabled="base.$invalid">Consultar</button>
+                <button type="button" class="btn btn-secundary" ng-click="treturnerConsum.limpar()" ng-disabled="base.$invalid">Limpar</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-2 col-md-offset-4 col-xs-3 col-xs-offset-3">
+        <form ng-show="treturnerConsum.recebeTs.Ttype != null">
+            <div class="form-group text-center">
+                <label>Tipo</label>
+                <input type="text" ng-model="treturnerConsum.recebeTs.Ttype" class="form-control">
+            </div>
+        </form>
+    </div>
+    <div class="col-md-2 col-xs-3">
+        <form ng-show="treturnerConsum.recebeTs.Ttype != null">
+            <div class="form-group text-center">
+                <label>Descrição</label>
+                <input type="text" ng-model="treturnerConsum.recebeTs.Ttext" class="form-control">
+            </div>
+        </form>
+    </div>
+</body>

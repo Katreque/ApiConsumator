@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+ <html ng-app="ApiConsumator">
+     <head>
+         <base href="/">
+            <meta charset="utf-8"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+            <title>API Consumator</title>
+     </head>
+     <body>
+        <header>
+            <div class="jumbotron text-center">
+                <h1>API Consumator</h1>
+            </div>            
+        </header>
+         <main>
+            <div ng-view></div>
+        </main> 
+
+        <footer>
+            <div class="container">
+                <div class="footer text-center navbar-fixed-bottom">
+                    <h5>API Consumator - 0.0.1 - Made By Katreque</h5>
+                </div>
+            </div>
+        </footer>
+
+        <!-- libs -->
+        <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="./bower_components/angular/angular.min.js"></script>
+        <script src="./bower_components/angular-route/angular-route.min.js"></script>
+        <!-- /libs -->
+
+        <!-- src -->
+        <script src="./scripts/app.js"></script>
+        <script src="./scripts/app.constant.js"></script>
+        <script src="./scripts/app.config.js"></script>
+        <script src="./scripts/services/TReturner_Services.js"></script>
+        <script src="./scripts/controllers/TReturner_Controller.js"></script>
+        <!-- /src -->
+     </body>
+</html>
