@@ -5,6 +5,7 @@ Using npm Aliv and proxy to consume my own API.
 
 File Organization Pattern used >>>
 
+```
 app
  +- scripts
   +- views
@@ -59,3 +60,4 @@ package.json
  ______ .vscode
  ______ node_modules
  ______ bower_components
+```
