@@ -1,4 +1,5 @@
-'use strict';
+(function(){
+'use strict'
 
 angular.module('ApiConsumator')
 .controller('TReturnerController', ['ServiceConsultaDeTs', function(ServiceConsultaDeTs) {
@@ -26,3 +27,4 @@ angular.module('ApiConsumator')
             this.recebeTs = "";
         }
     }])
+}())

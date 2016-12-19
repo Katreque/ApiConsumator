@@ -1,8 +1,10 @@
-'use strict';
+(function(){
+'use strict'
 
 angular.module('ApiConsumator')
         
     .constant('apiConfig', {
 
       'apiBase': '/api/'
-});
+  });
+}())

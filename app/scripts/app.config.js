@@ -1,3 +1,4 @@
+(function(){
 'use strict'
 
 angular.module('ApiConsumator')
@@ -16,4 +17,5 @@ angular.module('ApiConsumator')
 .config(['$locationProvider', function($locationProvider){
 
     $locationProvider.html5Mode(true);
-}])
+    }])
+}())

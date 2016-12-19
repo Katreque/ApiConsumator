@@ -1,4 +1,5 @@
-'use strict';
+(function(){
+'use strict'
 
 angular.module('ApiConsumator')
     .factory('ServiceConsultaDeTs', ['$http', '$q', 'apiConfig', function ($http, $q, apiConfig) {
@@ -22,6 +23,6 @@ angular.module('ApiConsumator')
                 })
             }) 
         }
-
         return new ConsultaDeTs();
     }])
+}())
