@@ -1,0 +1,33 @@
+html, body{
+    margin: 0;
+}
+
+.jumbotron{
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+
+.containerBig{
+    position: relative;
+    text-align: center;
+    padding: 5px;
+    padding-top: 150px; 
+}
+
+.container{
+    position: relative;
+    text-align: center;
+    padding: 5px;
+}
+
+.btn{
+    padding: 10px 15px;
+}
+
+.input{
+    padding: 5px;
+    width: 270px;
+    height: 0.6cm;
+}

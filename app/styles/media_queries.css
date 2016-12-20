@@ -1,0 +1,14 @@
+@media screen and (max-width: 700px){
+    .jumbotron{
+        position: relative;
+        text-align: center;
+        padding: 1px;
+        font-size: 15px;
+    }
+
+    .containerBig{
+        position: relative;
+        text-align: center;
+        padding: 10px; 
+    }
+}

@@ -9,11 +9,7 @@
   "scripts": {
     "start": "aliv",
     "build": "gulp build",
-    "dep": "gulp dep",
-    "js": "gulp js",
-    "css": "gulp css",
-    "html": "gulp html",
-    "img": "gulp img",
+    "start-dist": "aliv --pathIndex dist",
     "del": "gulp del",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
