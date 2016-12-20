@@ -8,7 +8,7 @@ angular.module('ApiConsumator')
         .when('/', {
             controller: 'TReturnerController',
             controllerAs: 'treturnerConsum',
-            templateUrl:'./views/TReturnerConsum_view.html',
+            templateUrl:'./views/treturnerconsum_view.html',
         })
  
         .otherwise({ redirectTo: '/' });

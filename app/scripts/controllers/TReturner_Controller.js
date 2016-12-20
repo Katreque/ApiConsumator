@@ -3,28 +3,27 @@
 
 angular.module('ApiConsumator')
 .controller('TReturnerController', ['ServiceConsultaDeTs', function(ServiceConsultaDeTs) {
+        var recebeTs = {};
+        var self = this;
 
-        var recebeTs = {}
+        self.consultarPorId = function() {
 
-        this.consultarPorId = () => {
-
-            ServiceConsultaDeTs.consultarPorId(this.id)
-            .then((res)=>{
-                
-                return this.recebeTs = res;
+            ServiceConsultaDeTs.consultarPorId(self.id)
+            .then(function(res) {                
+                return self.recebeTs = res;
             })
-            .catch((err)=>{
+            .catch(function(err) {
                 if(err === -1){
                     return alert("Falha ao conectar com o EndPoint!");
                 }
-            return alert("Erro "+err.err.status+" - "+err.err.statusText+"");
-        })        
-    }
 
-        this.limpar = ()=>{
+                return alert("Erro "+err.err.status+" - "+err.err.statusText+"");
+            })        
+        }
 
-            this.id = "";
-            this.recebeTs = "";
+        self.limpar = function() {
+            self.id = "";
+            self.recebeTs = "";
         }
     }])
 }())

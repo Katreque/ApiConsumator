@@ -8,6 +8,13 @@
   },
   "scripts": {
     "start": "aliv",
+    "build": "gulp build",
+    "dep": "gulp dep",
+    "js": "gulp js",
+    "css": "gulp css",
+    "html": "gulp html",
+    "img": "gulp img",
+    "del": "gulp del",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +28,13 @@
   },
   "homepage": "https://github.com/Katreque/ApiConsumator#readme",
   "devDependencies": {
-    "aliv": "^1.4.1"
+    "aliv": "^1.4.1",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-uglify": "^2.0.0",
+    "run-sequence": "^1.2.2"
   }
 }

@@ -14,13 +14,16 @@ angular.module('ApiConsumator')
             }
 
             return $http.get(apiConfig.apiBase + 'trequest/' + id)
-                .then((response) => {
+                .then(function(response) {
                     return response.data;
 
-                }).catch((err) => {
+                }).catch(function(err) {
                     return $q.reject({
-                     err: {"status": err.status, "statusText": "Id não encontrado!"}
-                })
+                     err: {
+                         "status": err.status, 
+                         "statusText": "Id não encontrado!"
+                        }
+                    })
             }) 
         }
         return new ConsultaDeTs();
