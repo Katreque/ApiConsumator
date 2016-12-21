@@ -1,7 +1,7 @@
 .jumbotron{
     background: linear-gradient(141deg, #20A3B8 0%, #1FC8F4 51%, #1498FF 115%);
     color: white;
-    font-size: 25px;
+    font-size: 15px;
     font-family: 'Roboto', sans-serif;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
