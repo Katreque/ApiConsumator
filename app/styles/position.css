@@ -19,7 +19,11 @@ html, body{
 .container{
     position: relative;
     text-align: center;
-    padding: 5px;
+    padding: 10px;
+}
+
+.formcontrol{
+    padding: 7px;
 }
 
 .btn{
@@ -27,7 +31,8 @@ html, body{
 }
 
 .input{
+    margin: 5px;
     padding: 5px;
-    width: 270px;
-    height: 0.6cm;
+    width: 260px;
+    height: 20px;
 }

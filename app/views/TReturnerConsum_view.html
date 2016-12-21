@@ -1,32 +1,31 @@
 <body>
     <div class="containerBig">
         <form name="base">
-            <div class="container">
+            <div>
                 <label class="label">Digite o número do T que deseja verificar</label>
             </div>
-            <div class="container">
+            <div>
                 <input class="input" type="number" ng-model="treturnerConsum.id">
             </div>
-            <div class="container">
+            <div>
                 <button type="button" class="btn" ng-click="treturnerConsum.consultarPorId()" ng-disabled="base.$invalid">Consultar</button>
                 <button type="button" class="btn btn-secundary" ng-click="treturnerConsum.limpar()" ng-disabled="base.$invalid">Limpar</button>
             </div>
         </form>
     </div>
 <div class="container">
-    <div class="container">
         <form ng-show="treturnerConsum.recebeTs.Ttype != null">
-            <div class="container">
-                <label>Tipo</label>
             <div>
-            <div class="container">
+                <label>Tipo</label>
+            </div>
+            <div>
                 <input class="input" type="text" ng-model="treturnerConsum.recebeTs.Ttype">
             </div>
         </form>
     </div>
     <div class="container">
         <form ng-show="treturnerConsum.recebeTs.Ttype != null">
-            <div class="container">
+            <div>
                 <label>Descrição</label>
             </div>
             <div>

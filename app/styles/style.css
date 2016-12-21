@@ -3,13 +3,16 @@
     color: white;
     font-size: 25px;
     font-family: 'Roboto', sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .btn{
+    margin-top: 7px; 
     background: #1FB4FE;
     border-color: #1FB4FE;
     color: white;
     border-style: solid;
+    font-family: 'Roboto', sans-serif;
 }
 
 .btn-secundary{
@@ -19,12 +22,14 @@
 }
 
 .input{
-    border-color: darkgray;
+    border-color: lightgray;
     border-width: 1px;
 }
 
 .label{
+    margin: 3px;
     font-size: 15px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .footer{
