@@ -12,7 +12,7 @@
     "start-dist": "aliv --pathIndex dist",
     "del": "gulp del",
     "karma": "gulp karma",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "karma start"
   },
   "repository": {
     "type": "git",
@@ -28,7 +28,6 @@
     "aliv": "^1.4.1",
     "angular": "^1.6.0",
     "angular-mocks": "^1.6.0",
-    "angular-ui-router": "^0.3.2",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-cssmin": "^0.1.7",

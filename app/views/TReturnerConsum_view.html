@@ -8,8 +8,15 @@
                 <input class="input" type="number" ng-model="treturnerConsum.id">
             </div>
             <div>
-                <button type="button" class="btn" ng-click="treturnerConsum.consultarPorId()" ng-disabled="base.$invalid">Consultar</button>
-                <button type="button" class="btn btn-secundary" ng-click="treturnerConsum.limpar()" ng-disabled="base.$invalid">Limpar</button>
+                <button type="button" 
+                        class="btn" 
+                        ng-click="treturnerConsum.consultarPorId(treturnerConsum.id)" 
+                        ng-disabled="base.$invalid">Consultar</button>
+
+                <button type="button" 
+                        class="btn btn-secundary" 
+                        ng-click="treturnerConsum.limpar()" 
+                        ng-disabled="base.$invalid">Limpar</button>
             </div>
         </form>
     </div>
