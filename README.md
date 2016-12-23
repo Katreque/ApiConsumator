@@ -1,7 +1,10 @@
 # ApiConsumator
-How to Consume an API with AngularJS 1.*
+How to Consume an API with AngularJS 1.* 
+Learning how to implement new tecnologies;
 
-Using npm Aliv and proxy to consume my own API.
+Use of Node, aliv, bower, gulp and Karma + Jasminie for unit testing. 
+
+Next onGoing: Protractor!
 
 File Organization Pattern used >>>
 
