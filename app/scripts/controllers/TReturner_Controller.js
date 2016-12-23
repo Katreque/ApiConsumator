@@ -17,13 +17,13 @@ angular.module('ApiConsumator')
                     return $window.alert("Falha ao conectar com o EndPoint!");
                 }
 
-                return $window.alert("Erro "+err.err.status+" - "+err.err.statusText+"");
+                return $window.alert("Erro "+err.status+" - "+err.statusText+"");
             })        
         }
 
         self.limpar = function() {
             self.id = "";
-            self.recebeTs = "";
+            self.recebeTs = {};
         }
     }])
 }())

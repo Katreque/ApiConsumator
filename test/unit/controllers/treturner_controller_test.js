@@ -1,15 +1,3 @@
-describe('TReturner Controller', function(){
-    it('teste do teste do teste para saber quanto é 2 + 2', function(){
-        expect(2+2).toEqual(4);
-    });
-});
-
-describe('Esse Teste e tipo Birrlll!', function(){
-    it('sai de casa, codei pra', function(){
-        expect("birll").toEqual("birll");
-    })
-})
-
 describe('TReturnerController', function() {
     var _rootScope, _scope, _q, ServiceConsultaDeTs, _window;
     var NOME_CONTROLLER = 'TReturnerController as ctrl';
@@ -36,10 +24,12 @@ describe('TReturnerController', function() {
         _scope.ctrl.recebeTs = { 'teste': "Aro!",
                                  'teste2': "Aro2!"}
         _scope.ctrl.limpar();
-        expect(_scope.ctrl.recebeTs).toEqual('');
+        expect(_scope.ctrl.recebeTs).toEqual({});
     }))
 
-    it('Verifica se o resultado de retorno é o esperado quando True', inject(function($controller) {
+    it('Verifica se o resultado de retorno é o esperado e o id é 1', inject(function($controller) {
+        var _resultadoEsperado = {"id":"1","Ttype":"Type 1","Ttext":"Tempz"}
+
         spyOn(ServiceConsultaDeTs, 'consultarPorId').and.callFake(function() {
             return _q.resolve(_resultadoEsperado);
         })
@@ -47,8 +37,6 @@ describe('TReturnerController', function() {
         spyOn(_window, 'alert').and.callThrough();
 
         $controller(NOME_CONTROLLER, {$scope: _scope})
-
-        var _resultadoEsperado = {"id":"1","Ttype":"Type 1","Ttext":"Tempz"}
 
         var _id = 1;
 
@@ -62,6 +50,8 @@ describe('TReturnerController', function() {
     }))
 
     it('Verifica se o resultado de retorno é exception e retornou -1 do servidor.', inject(function($controller){
+        var _resultadoEsperado = -1;
+
         spyOn(ServiceConsultaDeTs, 'consultarPorId').and.callFake(function() {
             return _q.reject(_resultadoEsperado);
         })
@@ -69,8 +59,6 @@ describe('TReturnerController', function() {
         spyOn(_window, 'alert').and.callThrough();
         
         $controller(NOME_CONTROLLER, {$scope: _scope})
-
-        var _resultadoEsperado = -1;
         
         var _id = 0;
 
@@ -79,7 +67,28 @@ describe('TReturnerController', function() {
         _rootScope.$digest();
 
         expect(_scope.ctrl.recebeTs).toEqual({});
-        expect(_window.alert).toHaveBeenCalled();
         expect(_window.alert).toHaveBeenCalledWith('Falha ao conectar com o EndPoint!');
+    }))
+
+    it('Verifica se o resultado de retorno é uma exception e retornou algum erro em específico.', inject(function($controller){
+        var _resultadoEsperado = {status:'404',
+                                  statusText:'Not Found'};
+
+        spyOn(ServiceConsultaDeTs, 'consultarPorId').and.callFake(function() {
+            return _q.reject(_resultadoEsperado);
+        })
+
+        spyOn(_window, 'alert').and.callThrough();
+        
+        $controller(NOME_CONTROLLER, {$scope: _scope})
+
+        var _id = 0;
+
+        _scope.ctrl.consultarPorId(_id);
+
+        _rootScope.$digest();
+
+        expect(_scope.ctrl.recebeTs).toEqual({});
+        expect(_window.alert).toHaveBeenCalledWith('Erro 404 - Not Found');
     }))
 })

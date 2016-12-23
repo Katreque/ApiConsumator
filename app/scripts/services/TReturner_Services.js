@@ -6,11 +6,8 @@ angular.module('ApiConsumator')
         var ConsultaDeTs = function () { }
 
         ConsultaDeTs.prototype.consultarPorId = function (id) {
-
             if (id === "" || id === undefined) {
-                return $q.reject({
-                    err: {"status": "400", "statusText":"Campo em branco!"}
-                })
+                return $q.reject(new TypeError('Id não informado.'));
             }
 
             return $http.get(apiConfig.apiBase + 'trequest/' + id)
@@ -19,11 +16,9 @@ angular.module('ApiConsumator')
 
                 }).catch(function(err) {
                     return $q.reject({
-                     err: {
-                         "status": err.status, 
-                         "statusText": "Id não encontrado!"
-                        }
-                    })
+                         "status": err.status || 400, 
+                         "statusText": err.data.msg || "Id não encontrado!"
+                })
             }) 
         }
         return new ConsultaDeTs();

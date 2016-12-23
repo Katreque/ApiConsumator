@@ -40,5 +40,17 @@
             </div>
         </form>
     </div>
+
+    <div ng-show="treturnerConsum.recebeTs.estaValido()">
+        <p>Valido!</p>    
+    </div>
+
+    <div ng-show="treturnerConsum.recebeTs.typePreenchido()">
+        <p>Type Preenchido!</p>    
+    </div>
+
+    <div ng-show="treturnerConsum.recebeTs.textPreenchido()">
+        <p>Text Preenchido!</p>    
+    </div>
 </div>
 </body>
