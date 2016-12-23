@@ -1,5 +1,5 @@
 describe('TReturnerService', function(){
-    var _rootScope, _httpBackend, ServiceConsultaDeTs;
+    var _rootScope, _httpBackend, ServiceConsultaDeTs, ModeloConsultaDeTs;
     var URL_CONSULTA_ID = '/api/trequest/';
 
     beforeEach(module('ApiConsumator'));
@@ -8,6 +8,7 @@ describe('TReturnerService', function(){
         _rootScope = $injector.get('$rootScope');        
         _httpBackend = $injector.get('$httpBackend');
         ServiceConsultaDeTs = $injector.get('ServiceConsultaDeTs');
+        ModeloConsultaDeTs = $injector.get('ModeloConsultaDeTs');
     }))
 
     describe('consultaPorId', function() {
@@ -74,7 +75,7 @@ describe('TReturnerService', function(){
 
             ServiceConsultaDeTs.consultarPorId(_id)
                 .then(function(r) {
-                    expect(r).toEqual(payload)
+                    expect(r).toEqual(new ModeloConsultaDeTs(payload))
                 })
                 .catch(function(e) {
                     expect(true).toBe(false)

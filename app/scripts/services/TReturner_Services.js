@@ -2,7 +2,7 @@
 'use strict'
 
 angular.module('ApiConsumator')
-    .factory('ServiceConsultaDeTs', ['$http', '$q', 'apiConfig', function ($http, $q, apiConfig) {
+    .factory('ServiceConsultaDeTs', ['$http', '$q', 'apiConfig', 'ModeloConsultaDeTs', function ($http, $q, apiConfig, ModeloConsultaDeTs) {
         var ConsultaDeTs = function () { }
 
         ConsultaDeTs.prototype.consultarPorId = function (id) {
@@ -12,8 +12,7 @@ angular.module('ApiConsumator')
 
             return $http.get(apiConfig.apiBase + 'trequest/' + id)
                 .then(function(response) {
-                    return response.data;
-
+                    return new ModeloConsultaDeTs(response.data);
                 }).catch(function(err) {
                     return $q.reject({
                          "status": err.status || 400, 
