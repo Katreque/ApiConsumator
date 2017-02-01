@@ -16,12 +16,15 @@ angular.module('ApiConsumator')
 
         ModeloConsulta.prototype.textPreenchido =  function(){
             return !!this.Ttext.length
-        }    
-
-        ModeloConsulta.prototype.estaValido =  function(){
-            return !!this.Ttext.length && !!this.Ttype.length
         }
 
-        return ModeloConsulta;    
+        ModeloConsulta.prototype.isValid =  function(valor){
+            if(valor === null){
+              return false;
+            }
+            return true;
+        }
+
+        return ModeloConsulta;
     }])
 }())

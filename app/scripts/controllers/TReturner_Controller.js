@@ -5,11 +5,11 @@ angular.module('ApiConsumator')
 .controller('TReturnerController', ['$window', 'ServiceConsultaDeTs', function($window, ServiceConsultaDeTs) {
         var self = this;
         self.recebeTs = {};
-    
+
         self.consultarPorId = function(id) {
 
             ServiceConsultaDeTs.consultarPorId(id)
-            .then(function(res) {                
+            .then(function(res) {
                 return self.recebeTs = res;
             })
             .catch(function(err) {
@@ -18,7 +18,7 @@ angular.module('ApiConsumator')
                 }
 
                 return $window.alert("Erro "+err.status+" - "+err.statusText+"");
-            })        
+            })
         }
 
         self.limpar = function() {

@@ -5,17 +5,19 @@
                 <label class="label">Digite o número do T que deseja verificar</label>
             </div>
             <div>
-                <input class="input" type="number" ng-model="treturnerConsum.id">
+                <input id="entrada" class="input" type="number" ng-model="treturnerConsum.id">
             </div>
             <div>
-                <button type="button" 
-                        class="btn" 
-                        ng-click="treturnerConsum.consultarPorId(treturnerConsum.id)" 
+                <button id="btnConsulta"
+                        type="button"
+                        class="btn"
+                        ng-click="treturnerConsum.consultarPorId(treturnerConsum.id)"
                         ng-disabled="base.$invalid">Consultar</button>
 
-                <button type="button" 
-                        class="btn btn-secundary" 
-                        ng-click="treturnerConsum.limpar()" 
+                <button id="btnLimpar"
+                        type="button"
+                        class="btn btn-secundary"
+                        ng-click="treturnerConsum.limpar()"
                         ng-disabled="base.$invalid">Limpar</button>
             </div>
         </form>
@@ -26,7 +28,7 @@
                 <label>Tipo</label>
             </div>
             <div>
-                <input class="input" type="text" ng-model="treturnerConsum.recebeTs.Ttype">
+                <input id="tipo" class="input" type="text" ng-model="treturnerConsum.recebeTs.Ttype">
             </div>
         </form>
     </div>
@@ -36,21 +38,9 @@
                 <label>Descrição</label>
             </div>
             <div>
-                <input class="input" type="text" ng-model="treturnerConsum.recebeTs.Ttext">
+                <input id="descricao" class="input" type="text" ng-model="treturnerConsum.recebeTs.Ttext">
             </div>
         </form>
-    </div>
-
-    <div ng-show="treturnerConsum.recebeTs.estaValido()">
-        <p>Valido!</p>    
-    </div>
-
-    <div ng-show="treturnerConsum.recebeTs.typePreenchido()">
-        <p>Type Preenchido!</p>    
-    </div>
-
-    <div ng-show="treturnerConsum.recebeTs.textPreenchido()">
-        <p>Text Preenchido!</p>    
     </div>
 </div>
 </body>

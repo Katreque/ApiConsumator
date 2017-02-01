@@ -12,7 +12,8 @@
     "start-dist": "aliv --pathIndex dist",
     "del": "gulp del",
     "karma": "gulp karma",
-    "test": "karma start"
+    "test": "karma start",
+    "p": "protractor protractor.conf.js"
   },
   "repository": {
     "type": "git",
@@ -39,6 +40,7 @@
     "karma-chrome-launcher": "^2.0.0",
     "karma-cli": "^1.0.1",
     "karma-jasmine": "^1.1.0",
+    "protractor": "^5.1.0",
     "run-sequence": "^1.2.2"
   }
 }
